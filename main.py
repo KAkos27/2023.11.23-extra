@@ -23,3 +23,6 @@ print(f"{kul} a legkisebb és legnagyobb különbsége")
 
 szer:str=feladatok.szerepel(lotto)
 print(szer)
+
+talalat:int=feladatok.talalat(lotto)
+print(talalat)

@@ -62,3 +62,30 @@ def szerepel(lista):
             return szer
     return nemszer
         
+def talalat(lista):
+    szelveny = []
+    tal:str = "Van találat!"
+    nemtal:str = "Nincs találat!"
+    a:int = 0
+    for i in range(0,5,1):
+        szam:int = int(input("Kérek egy számot!: "))
+        szelveny.append(szam)
+    print(lista)
+    print(szelveny)
+
+    for i in range(0,5,1):
+        if szelveny[i] == lista[0]:
+            return tal
+    for i in range(0,5,1):
+        if szelveny[i] == lista[1]:
+            return tal
+    for i in range(0,5,1):
+        if szelveny[i] == lista[2]:
+            return tal
+    for i in range(0,5,1):
+        if szelveny[i] == lista[3]:
+            return tal
+    for i in range(0,5,1):
+        if szelveny[i] == lista[4]:
+            return tal
+    return nemtal
