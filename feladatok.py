@@ -3,9 +3,19 @@ import math
 
 def szamok():
     lotto=[]
-    for i in range(1,6,1):
+
+    szam:int =math.floor(random.random()*90+1)
+    lotto.append(szam)
+
+    while len(lotto) < 5:
+        ismetles = False
         szam:int =math.floor(random.random()*90+1)
-        lotto.append(szam)
+        for i in range(0,len(lotto),1):
+            if szam == lotto[i]:
+                ismetles = True
+        if ismetles == False:
+            lotto.append(szam)
+        
     print(lotto)
     return lotto
 
@@ -67,9 +77,20 @@ def talalat(lista):
     tal:str = "Van találat!"
     nemtal:str = "Nincs találat!"
     
-    for i in range(0,5,1):
-        szam:int = int(input("Kérek egy számot!: "))
-        szelveny.append(szam)
+    szam:int=int(input("Kérek egy számot!: "))
+    szelveny.append(szam)
+
+    while len(szelveny) < len(lista):
+        ismetles = False
+        szam:int=int(input("Kérek egy számot!: "))
+        for i in range(0,len(szelveny),1):
+            if szam == szelveny[i]:
+                ismetles = True
+        if ismetles == False:
+            szelveny.append(szam)
+        else:
+            print("Hiba! Két különböző számot kell megadni!")
+
     print(lista)
     print(szelveny)
 
@@ -84,9 +105,20 @@ def hanytalalt(lista):
     szelveny = []
     talszam:int = 0
     
-    for i in range(0,5,1):
-        szam:int = int(input("Kérek egy számot!: "))
-        szelveny.append(szam)
+    szam:int=int(input("Kérek egy számot!: "))
+    szelveny.append(szam)
+    
+    while len(szelveny) < len(lista):
+        ismetles = False
+        szam:int=int(input("Kérek egy számot!: "))
+        for i in range(0,len(szelveny),1):
+            if szam == szelveny[i]:
+                ismetles = True
+        if ismetles == False:
+            szelveny.append(szam)
+        else:
+            print("Hiba! Két különböző számot kell megadni!")
+    
     print(lista)
     print(szelveny)
 
