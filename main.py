@@ -26,3 +26,6 @@ print(szer)
 
 talalat:int=feladatok.talalat(lotto)
 print(talalat)
+
+talszam:int=feladatok.hanytalalt(lotto)
+print(f"Ennyi találatod volt: {talszam}")

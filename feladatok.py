@@ -79,3 +79,20 @@ def talalat(lista):
                 return tal
         i=0
     return nemtal
+
+def hanytalalt(lista):
+    szelveny = []
+    talszam:int = 0
+    
+    for i in range(0,5,1):
+        szam:int = int(input("Kérek egy számot!: "))
+        szelveny.append(szam)
+    print(lista)
+    print(szelveny)
+
+    for a in range(0,len(lista),1):
+        for i in range(0,len(lista),1):
+            if szelveny[i] == lista[a]:
+                talszam+=1
+        i=0
+    return talszam
